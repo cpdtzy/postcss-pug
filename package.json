@@ -1,0 +1,21 @@
+{
+  "name": "postcss-pug",
+  "version": "1.0.0",
+  "description": "使用postcss和pug去搭建html和css",
+  "main": "src",
+  "author": "Jeremy Chen",
+  "license": "MIT",
+  "scripts": {
+    "pro": "npm run clean && npm run pug && npm run postcss",
+    "clean": "force-del dist",
+    "pug": "pug src/index.pug -o dist",
+    "postcss": "postcss src/postcss/*.pcss --no-map -o dist/assets/index.css"
+  },
+  "devDependencies": {
+    "force-del-cli": "^1.3.1",
+    "postcss": "^8.4.14",
+    "postcss-cli": "^9.1.0",
+    "pug": "^3.0.2",
+    "pug-cli": "^1.0.0-alpha6"
+  }
+}
